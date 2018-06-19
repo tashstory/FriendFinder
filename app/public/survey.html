@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+        <div class="container-fluid">
+                <div class="jumbotron">
+                <h1>Take the Survey, find a friend!</h1>
+<form class ="form">
+<label for="name">Enter name.</label>
+<input type="text" id="name" placeholder="Enter name" required>
+
+
+<label for="photo">Link a picture.</label>
+<input type="text" id="photo" required>
+
+    <div class="form-group">
+        <label for="sel1">When you relax, do you like to be around people?</label>
+        <select class="form-control" id="q1" required>
+        <option value="" selected disabled hidden>No Rate</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>  
+      <div class="form-group">
+            <label for="sel1">Do you read?</label>
+            <select class="form-control" id="q2">
+                    <option value="" selected disabled hidden>No Rate</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>  
+          <div class="form-group">
+                <label for="sel1">Do you enjoy the outdoors?</label>
+                <select class="form-control" id="q3">
+                        <option value="" selected disabled hidden>No Rate</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>  
+              <div class="form-group">
+                    <label for="sel1">How do you feel about rock and roll?</label>
+                    <select class="form-control" id="q4">
+                            <option value="" selected disabled hidden>No Rate</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>  
+                  <div class="form-group">
+                        <label for="sel1">Would you ever go sky diving?</label>
+                        <select class="form-control" id="q5">
+                                <option value="" selected disabled hidden>No Rate</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>  
+                      
+    <div class="form-group">
+            <label for="sel1">Do you play sports in your free time?</label>
+            <select class="form-control" id="q6" required>
+            <option value="" selected disabled hidden>No Rate</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>  
+          <div class="form-group">
+                <label for="sel1">Are you a patriot?</label>
+                <select class="form-control" id="q7">
+                        <option value="" selected disabled hidden>No Rate</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>  
+              <div class="form-group">
+                    <label for="sel1">Do you code?</label>
+                    <select class="form-control" id="q8">
+                            <option value="" selected disabled hidden>No Rate</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>  
+                  <div class="form-group">
+                        <label for="sel1">Can you dance?</label>
+                        <select class="form-control" id="q9">
+                                <option value="" selected disabled hidden>No Rate</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>  
+                      <div class="form-group">
+                            <label for="sel1">ADo you think you have a life?</label>
+                            <select class="form-control" id="q10">
+                                    <option value="" selected disabled hidden>No Rate</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+
+                            </select>
+                          </div> 
+      <button class = "btn" type="submit" >Find Friend</button>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    $(".form").on("submit", function(event){
+        event.preventDefault();
+        var scores = [];
+        scores.push($("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val() )
+        var photo = $("#photo").val();
+        var name = $("#name").val();
+        console.log(name);
+
+        var friend_obj = {
+            name: name,
+            photo: photo,
+            scores: scores,
+        }
+         console.log(friend_obj);
+        $.post(window.location.origin + "api/friends.js", friend_obj, function(res){
+                console.log(res)
+                    })
+    })
+    
+    
+</script>
+
+
+
+
+
+
