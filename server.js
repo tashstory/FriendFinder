@@ -9,12 +9,11 @@ var PORT = process.env.PORT || 8080;
 // express setup to parse body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use(bodyParser.text());app.use(bodyParser.json( ));
 
 
 require('./app/routing/apiRoutes.js')(app); 
-require('./app/routing/htmlRouted.js')(app);
+require('./app/routing/htmlRoutes.js')(app);
 //routes
 
 //tells the server to begin listening

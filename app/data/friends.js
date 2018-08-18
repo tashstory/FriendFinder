@@ -1,6 +1,6 @@
 var friendobj = [{
-    "name":"Ahmed",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"Stacey",
+    "photo":"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&h=350",
     "scores":[
         5,
         1,
@@ -16,7 +16,7 @@ var friendobj = [{
   },
   {
     "name":"Billy",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     "scores":[
         2,
         4,
@@ -32,7 +32,7 @@ var friendobj = [{
   },
   {
     "name":"Ryan",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo":"https://ccnchurch.org/wp-content/uploads/2017/04/Picture-of-person.png",
     "scores":[
         3,
         4,
